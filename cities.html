@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Cities | GlobalBiz</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Mapbox CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cities.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">GlobalBiz</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search cities..." id="search-input">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="cities.html" class="active">Cities</a></li>
+                <li><a href="#">Add Business</a></li>
+                <li><a href="#" class="btn-login">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cities Header -->
+    <section class="cities-header">
+        <div class="container">
+            <h1>Business Cities Worldwide</h1>
+            <p>Discover businesses in cities across the globe</p>
+        </div>
+    </section>
+
+    <!-- Main Cities Section -->
+    <section class="all-cities">
+        <div class="container">
+            <div class="city-filter">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="popular">Popular</button>
+                    <button class="filter-btn" data-filter="country">By Country</button>
+                </div>
+                <div class="sort-options">
+                    <select id="sort-cities">
+                        <option value="name-asc">Sort by: Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="business-asc">Business Count (Low-High)</option>
+                        <option value="business-desc">Business Count (High-Low)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="country-selector" id="country-selector" style="display: none;">
+                <select id="country-filter">
+                    <option value="">Select a country</option>
+                    <!-- Countries will be loaded via JavaScript -->
+                </select>
+            </div>
+
+            <div class="cities-container" id="cities-container">
+                <!-- Cities will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Cities Section -->
+    <section class="popular-cities">
+        <div class="container">
+            <h2>Most Popular Cities</h2>
+            <p>Cities with the highest number of businesses</p>
+            <div class="popular-cities-grid" id="popular-cities">
+                <!-- Popular cities will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- World Map Section -->
+    <section class="world-map">
+        <div class="container">
+            <h2>Explore Businesses on the Map</h2>
+            <div id="world-map"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>GlobalBiz</h3>
+                    <p>The worldwide business directory connecting customers with businesses across the globe.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="cities.html">Cities</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Top Cities</h3>
+                    <ul>
+                        <li><a href="#">New York</a></li>
+                        <li><a href="#">London</a></li>
+                        <li><a href="#">Tokyo</a></li>
+                        <li><a href="#">Dubai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Subscribe</h3>
+                    <p>Get the latest business updates</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 GlobalBiz. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="cities.js"></script>
+</body>
+</html>
